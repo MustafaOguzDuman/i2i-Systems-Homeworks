@@ -21,7 +21,7 @@ func check(e error) {
 //if not it returns an empty string
 func isPrime(num int) string{
     //prime numbers start at 2. If the number is less than 2 it isn't a prime
-    if(num < 2){
+    if num < 2{
         return ""
     }
     //a number is prime if it is doesn't have a number less than or equal to...
