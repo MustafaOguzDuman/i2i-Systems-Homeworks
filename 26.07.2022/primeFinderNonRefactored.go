@@ -9,19 +9,6 @@ import (
 )
 
 
-func isPrime(num int){
-    if(num < 2){
-        fmt.Println(num)
-    }
-    sq_root := int(math.Sqrt(float64(num)))
-    for i:=2; i<=sq_root; i++{
-        if num % i == 0 {
-            fmt.Println(num)
-        }
-    }
-    fmt.Println(num, " => Prime")
-}
-
 func main(){
     file, err := os.Open("numbers.txt")
     if err != nil {
@@ -36,7 +23,7 @@ func main(){
         if err != nil {
             panic(err)
         }
-        if(num < 2){
+        if num < 2 {
             fmt.Println(num)
         } else{
             var cond bool
@@ -49,7 +36,7 @@ func main(){
                     break
                 }
             }
-            if(cond){
+            if cond {
                 fmt.Println(num, " => Prime")
             }
         }
